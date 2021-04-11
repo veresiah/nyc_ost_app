@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_11_180725) do
+ActiveRecord::Schema.define(version: 2021_04_11_183523) do
 
   create_table "applications", force: :cascade do |t|
     t.integer "program_id"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2021_04_11_180725) do
     t.string "emergency_contact_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "parent_id"
+    t.integer "student_id"
   end
 
   create_table "boroughs", force: :cascade do |t|
@@ -59,6 +61,27 @@ ActiveRecord::Schema.define(version: 2021_04_11_180725) do
     t.string "age_group"
     t.text "address"
     t.string "capacity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.integer "role", default: 0
+    t.string "first_name"
+    t.string "last_name"
+    t.date "date_of_birth"
+    t.string "gender"
+    t.string "username"
+    t.string "password_digest"
+    t.string "school_name"
+    t.integer "grade"
+    t.string "address_field_one"
+    t.string "address_field_two"
+    t.string "city"
+    t.integer "zip_code"
+    t.string "country"
+    t.integer "phone_number"
+    t.string "email_address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
