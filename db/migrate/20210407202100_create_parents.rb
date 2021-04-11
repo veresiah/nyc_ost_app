@@ -3,7 +3,7 @@ class CreateParents < ActiveRecord::Migration[6.1]
     create_table :parents do |t|
       t.string :first_name
       t.string :last_name
-      t.string :user_name
+      t.string :username
       t.string :password_digest
       t.string :address_field_one 
       t.string :address_field_two
@@ -12,6 +12,7 @@ class CreateParents < ActiveRecord::Migration[6.1]
       t.string :country
       t.integer :phone_number
       t.string :email_address 
+      
       t.timestamps
     end
   end

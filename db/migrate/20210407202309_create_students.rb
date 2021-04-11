@@ -3,7 +3,7 @@ class CreateStudents < ActiveRecord::Migration[6.1]
     create_table :students do |t|
       t.string :first_name
       t.string :last_name
-      t.t.strftime :date_of_birth
+      t.date :date_of_birth
       t.string :gender
       t.string :username
       t.string :password_digest
@@ -16,7 +16,6 @@ class CreateStudents < ActiveRecord::Migration[6.1]
       t.string :country
       t.integer :phone_number
       t.string :email_address 
-
 
       t.timestamps
     end

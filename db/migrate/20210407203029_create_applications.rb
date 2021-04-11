@@ -4,7 +4,7 @@ class CreateApplications < ActiveRecord::Migration[6.1]
       t.integer :program_id
       t.string :student_first_name
       t.string :student_last_name
-      t.strftime :date_of_birth
+      t.date :date_of_birth
       t.string :gender 
       t.integer :grade
       t.integer :student_contact_number
@@ -23,9 +23,9 @@ class CreateApplications < ActiveRecord::Migration[6.1]
       t.string :primary_doctor
       t.string :allergies 
       t.string :medical_conditions 
-      t.string :medication
+      t.string :medications
       t.string :emergency_contact_name
-      t.string :ermergency_contact_relationship
+      t.string :emergency_contact_relationship
       t.string :emergency_contact_number
 
       t.timestamps
