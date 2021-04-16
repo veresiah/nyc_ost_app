@@ -11,5 +11,17 @@ class Application < ApplicationRecord
     validates :grade, presence: true
     validates :student_email_address, presence: true #if student is 17+
     validates :student_contact_number, length: { is: 10 } #if student is 17+
-    
+    validates :parent_work_number, length: { is: 10 }
+    validates :parent_work_number, length: { is: 10 }
+    validates :parent_home_number, length: { is: 10 }
+    validates :parent_email_address, presence: true
+    validates :address_field_one, presence: true 
+    validates :zip_code, presence: true 
+    validates :primary_doctor, presence: true 
+    validates :allergies #defaults to N/A 
+    validates :medical_conditions, presence: true 
+    validates :medications, presence: true
+    valdiates :emergency_contact_name, presence: true
+    valdiates :emergency_relationship, presence: true
+    valdiates :emergency_contact_number, length: { is: 10 }
 end
